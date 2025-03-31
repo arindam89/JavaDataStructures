@@ -31,6 +31,15 @@ public class Trie {
     }
     
     /**
+     * Gets the root node of the trie.
+     * 
+     * @return the root node
+     */
+    public TrieNode getRoot() {
+        return root;
+    }
+    
+    /**
      * Inserts a word into the trie.
      * Time Complexity: O(m) where m is the length of the word
      * 
@@ -295,5 +304,37 @@ public class Trie {
      */
     public boolean isEmpty() {
         return !root.hasChildren() && !root.isEndOfWord();
+    }
+    
+    /**
+     * Gets all words stored in the trie.
+     * 
+     * @return a set of all words in the trie
+     */
+    public Set<String> getAllWords() {
+        Set<String> words = new HashSet<>();
+        StringBuilder prefix = new StringBuilder();
+        collectAllWords(root, prefix, words);
+        return words;
+    }
+    
+    /**
+     * Helper method to recursively collect all words in the trie.
+     * 
+     * @param node the current node
+     * @param prefix the current prefix
+     * @param words the set to store the words
+     */
+    private void collectAllWords(TrieNode node, StringBuilder prefix, Set<String> words) {
+        if (node.isEndOfWord()) {
+            words.add(prefix.toString());
+        }
+        
+        for (Map.Entry<Character, TrieNode> entry : node.getChildren().entrySet()) {
+            char c = entry.getKey();
+            prefix.append(c);
+            collectAllWords(entry.getValue(), prefix, words);
+            prefix.deleteCharAt(prefix.length() - 1);
+        }
     }
 }

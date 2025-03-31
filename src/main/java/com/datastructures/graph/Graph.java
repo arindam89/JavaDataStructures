@@ -27,6 +27,9 @@ public class Graph<T> {
     // Flag to indicate if the graph is directed
     private boolean directed;
     
+    // Flag to indicate if the graph is weighted
+    private boolean weighted;
+    
     /**
      * Constructs an empty undirected graph.
      */
@@ -40,8 +43,19 @@ public class Graph<T> {
      * @param directed true if the graph is directed, false otherwise
      */
     public Graph(boolean directed) {
+        this(directed, false);
+    }
+    
+    /**
+     * Constructs an empty graph.
+     * 
+     * @param directed true if the graph is directed, false otherwise
+     * @param weighted true if the graph is weighted, false otherwise
+     */
+    public Graph(boolean directed, boolean weighted) {
         this.adjacencyList = new HashMap<>();
         this.directed = directed;
+        this.weighted = weighted;
     }
     
     /**
@@ -258,6 +272,52 @@ public class Graph<T> {
      */
     public boolean isDirected() {
         return directed;
+    }
+    
+    /**
+     * Checks if the graph is weighted.
+     * 
+     * @return true if the graph is weighted, false otherwise
+     */
+    public boolean isWeighted() {
+        return weighted;
+    }
+    
+    /**
+     * Gets the adjacency list representation of the graph.
+     * 
+     * @return the adjacency list
+     */
+    public Map<T, Map<T, Integer>> getAdjacencyList() {
+        return adjacencyList;
+    }
+    
+    /**
+     * Checks if there is an edge between two vertices.
+     * 
+     * @param source the source vertex
+     * @param destination the destination vertex
+     * @return true if there is an edge, false otherwise
+     */
+    public boolean hasEdge(T source, T destination) {
+        if (!adjacencyList.containsKey(source) || !adjacencyList.containsKey(destination)) {
+            return false;
+        }
+        return adjacencyList.get(source).containsKey(destination);
+    }
+    
+    /**
+     * Gets the weight of an edge between two vertices.
+     * 
+     * @param source the source vertex
+     * @param destination the destination vertex
+     * @return the weight of the edge, or -1 if there is no edge
+     */
+    public int getWeight(T source, T destination) {
+        if (!hasEdge(source, destination)) {
+            return -1;
+        }
+        return adjacencyList.get(source).get(destination);
     }
     
     /**
