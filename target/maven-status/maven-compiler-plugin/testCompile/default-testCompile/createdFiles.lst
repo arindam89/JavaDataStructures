@@ -1,0 +1,7 @@
+com/datastructures/linkedlist/LinkedListTest.class
+com/datastructures/bst/BinarySearchTreeTest.class
+com/datastructures/tree/BinaryTreeTest.class
+com/datastructures/heap/MinHeapTest.class
+com/datastructures/heap/MaxHeapTest.class
+com/datastructures/trie/TrieTest.class
+com/datastructures/graph/GraphTest.class
