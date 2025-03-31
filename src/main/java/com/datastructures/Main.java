@@ -6,6 +6,7 @@ import com.datastructures.tree.BinaryTreeExample;
 import com.datastructures.bst.BSTExample;
 import com.datastructures.graph.GraphExample;
 import com.datastructures.trie.TrieExample;
+import com.datastructures.leetcode.LeetCodeExample;
 
 /**
  * Main class to demonstrate all the data structures implementations.
@@ -42,5 +43,8 @@ public class Main {
         
         System.out.println("\n=== Trie Examples ===");
         TrieExample.runExample();
+        
+        System.out.println("\n=== LeetCode Problem Examples ===");
+        LeetCodeExample.runExample();
     }
 }
