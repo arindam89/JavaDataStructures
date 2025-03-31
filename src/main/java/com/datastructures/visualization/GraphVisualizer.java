@@ -7,10 +7,12 @@ import java.util.*;
 /**
  * Visualizer for Graph data structure.
  * Provides methods to create a text-based visualization of a Graph.
+ * 
+ * @param <T> the type of data stored in the graph vertices
  */
-public class GraphVisualizer implements DataStructureVisualizer {
+public class GraphVisualizer<T> implements DataStructureVisualizer {
 
-    private Graph<?> graph;
+    private Graph<T> graph;
     private static final int NODE_WIDTH = 5;
     private static final int NODE_HEIGHT = 3;
     private static final int MAX_NODES_TO_DISPLAY = 15; // Limit to avoid messy output
@@ -20,8 +22,9 @@ public class GraphVisualizer implements DataStructureVisualizer {
      * 
      * @param graph the Graph to visualize
      */
+    @SuppressWarnings("unchecked")
     public GraphVisualizer(Graph<?> graph) {
-        this.graph = graph;
+        this.graph = (Graph<T>) graph;
     }
     
     @Override
@@ -277,9 +280,9 @@ public class GraphVisualizer implements DataStructureVisualizer {
             visualization.append(String.format("%-4s", source));
             
             for (Object target : vertices) {
-                if (graph.hasEdge(source, target)) {
+                if (graph.hasEdge((T)source, (T)target)) {
                     if (graph.isWeighted()) {
-                        int weight = graph.getWeight(source, target);
+                        int weight = graph.getWeight((T)source, (T)target);
                         visualization.append(String.format("%-4s", weight));
                     } else {
                         visualization.append("1   ");

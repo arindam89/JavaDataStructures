@@ -9,6 +9,15 @@ import java.util.List;
 public class LeetCodeExamplePart2 {
     
     /**
+     * Main method to run examples directly.
+     * 
+     * @param args command line arguments (not used)
+     */
+    public static void main(String[] args) {
+        runExample();
+    }
+    
+    /**
      * Runs the example methods for the newly added LeetCode problems.
      */
     public static void runExample() {
@@ -32,6 +41,9 @@ public class LeetCodeExamplePart2 {
         
         System.out.println("\n19. LRU Cache II Example:");
         runLRUCacheIIExample();
+        
+        System.out.println("\n20. Word Dictionary Example:");
+        runWordDictionaryExample();
     }
 
     /**
@@ -192,5 +204,37 @@ public class LeetCodeExamplePart2 {
         System.out.println("Get key 1: " + lruCache.get(1));  // returns -1 (not found)
         System.out.println("Get key 3: " + lruCache.get(3));  // returns 3
         System.out.println("Get key 4: " + lruCache.get(4));  // returns 4
+    }
+    
+    /**
+     * Demonstrates the Word Dictionary implementation.
+     */
+    private static void runWordDictionaryExample() {
+        WordDictionary wordDictionary = new WordDictionary();
+        
+        System.out.println("Adding words to the dictionary: 'bad', 'dad', 'mad'");
+        wordDictionary.addWord("bad");
+        wordDictionary.addWord("dad");
+        wordDictionary.addWord("mad");
+        
+        System.out.println("Dictionary state: " + wordDictionary);
+        
+        System.out.println("\nSearching for 'pad': " + wordDictionary.search("pad"));
+        System.out.println("Searching for 'bad': " + wordDictionary.search("bad"));
+        System.out.println("Searching for '.ad': " + wordDictionary.search(".ad"));
+        System.out.println("Searching for 'b..': " + wordDictionary.search("b.."));
+        
+        System.out.println("\nAdding more words: 'bat', 'cat', 'rat'");
+        wordDictionary.addWord("bat");
+        wordDictionary.addWord("cat");
+        wordDictionary.addWord("rat");
+        
+        System.out.println("Dictionary state: " + wordDictionary);
+        
+        System.out.println("\nAdvanced search tests:");
+        System.out.println("Searching for '..t': " + wordDictionary.search("..t"));
+        System.out.println("Searching for 'b.t': " + wordDictionary.search("b.t"));
+        System.out.println("Searching for '...': " + wordDictionary.search("..."));
+        System.out.println("Searching for 'b...': " + wordDictionary.search("b..."));
     }
 }

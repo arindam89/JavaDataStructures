@@ -26,6 +26,15 @@ public class LinkedList<T> {
     private int size;
     
     /**
+     * Gets the head node of the linked list.
+     * 
+     * @return the head node
+     */
+    public Node<T> getHead() {
+        return head;
+    }
+    
+    /**
      * Constructs an empty linked list.
      */
     public LinkedList() {

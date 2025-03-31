@@ -46,11 +46,11 @@ public class VisualizationExample {
         
         // Create a linked list
         LinkedList<Integer> list = new LinkedList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(4);
-        list.add(5);
+        list.addLast(1);
+        list.addLast(2);
+        list.addLast(3);
+        list.addLast(4);
+        list.addLast(5);
         
         // Create a visualizer
         LinkedListVisualizer visualizer = new LinkedListVisualizer(list);
@@ -176,7 +176,7 @@ public class VisualizationExample {
         graph.addEdge("D", "E");
         
         // Create a visualizer
-        GraphVisualizer visualizer = new GraphVisualizer(graph);
+        GraphVisualizer<String> visualizer = new GraphVisualizer<>(graph);
         
         // Display circular layout visualization
         System.out.println("Graph visualization (circular layout):");

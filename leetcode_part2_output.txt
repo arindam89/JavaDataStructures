@@ -1,0 +1,92 @@
+13. Top K Frequent Elements Example:
+Array: [1, 1, 1, 2, 2, 3]
+k: 2
+Top 2 frequent elements: [1, 2]
+
+Using bucket sort approach:
+Top 2 frequent elements: [1, 2]
+
+14. Word Break Example:
+String: leetcode
+Word Dictionary: [leet, code]
+Can be segmented? true
+
+String: applepenapple
+Word Dictionary: [apple, pen]
+Can be segmented? true
+
+String: catsandog
+Word Dictionary: [cats, dog, sand, and, cat]
+Can be segmented? false
+
+15. Course Schedule Example:
+Number of courses: 2
+Prerequisites: [[1, 0]]
+Can finish all courses? true
+
+Number of courses: 2
+Prerequisites: [[1, 0], [0, 1]]
+Can finish all courses? false
+
+16. Longest Substring Without Repeating Characters Example:
+String: abcabcbb
+Length of longest substring: 3
+
+String: bbbbb
+Length of longest substring: 1
+
+String: pwwkew
+Length of longest substring: 3
+
+17. Decode String Example:
+Encoded string: 3[a]2[bc]
+Decoded string: aaabcbc
+
+Encoded string: 3[a2[c]]
+Decoded string: accaccacc
+
+Encoded string: 2[abc]3[cd]ef
+Decoded string: abcabccdcdcdef
+
+18. Valid Parentheses Example:
+String: ()
+Is valid? true
+
+String: ()[]{}
+Is valid? true
+
+String: (]
+Is valid? false
+
+String: ([{}])
+Is valid? true
+
+19. LRU Cache II Example:
+Create LRU Cache with capacity 2
+Put (1, 1)
+Put (2, 2)
+Get key 1: 1
+Put (3, 3) - This will evict key 2
+Get key 2: -1
+Put (4, 4) - This will evict key 1
+Get key 1: -1
+Get key 3: 3
+Get key 4: 4
+
+20. Word Dictionary Example:
+Adding words to the dictionary: 'bad', 'dad', 'mad'
+Dictionary state: WordDictionary [size=3]
+
+Searching for 'pad': false
+Searching for 'bad': true
+Searching for '.ad': true
+Searching for 'b..': true
+
+Adding more words: 'bat', 'cat', 'rat'
+Dictionary state: WordDictionary [size=6]
+
+Advanced search tests:
+Searching for '..t': true
+Searching for 'b.t': true
+Searching for '...': true
+Searching for 'b...': false

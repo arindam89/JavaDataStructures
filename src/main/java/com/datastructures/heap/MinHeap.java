@@ -245,6 +245,17 @@ public class MinHeap<T extends Comparable<T>> {
     }
     
     /**
+     * Returns an array containing all elements in the heap.
+     * Note: This does not return the elements in sorted order,
+     * it returns them in the order they are stored in the heap.
+     * 
+     * @return an array containing all elements in the heap
+     */
+    public Object[] toArray() {
+        return heap.toArray();
+    }
+    
+    /**
      * String representation of the heap.
      * 
      * @return a string representation of the heap
