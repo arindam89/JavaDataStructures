@@ -133,7 +133,14 @@ public class Trie {
             return false;
         }
         
-        return delete(root, word, 0);
+        // First check if the word exists
+        if (!search(word)) {
+            return false;
+        }
+        
+        // Word exists, now try to delete it
+        deleteHelper(root, word, 0);
+        return true; // Word was successfully deleted
     }
     
     /**
@@ -144,9 +151,10 @@ public class Trie {
      * @param index the current index in the word
      * @return true if the word was deleted, false otherwise
      */
-    private boolean delete(TrieNode current, String word, int index) {
+    private boolean deleteHelper(TrieNode current, String word, int index) {
+        // Base case: we've reached the end of the word
         if (index == word.length()) {
-            // If the word doesn't end here, it doesn't exist in the trie
+            // If this node is not marked as the end of a word, the word doesn't exist in the trie
             if (!current.isEndOfWord()) {
                 return false;
             }
@@ -154,10 +162,11 @@ public class Trie {
             // Mark this node as not the end of a word
             current.setEndOfWord(false);
             
-            // Return true if this node has no children, indicating it can be deleted
+            // Return whether this node can be deleted (no children)
             return !current.hasChildren();
         }
         
+        // Get the current character and find its child node
         char ch = word.charAt(index);
         TrieNode child = current.getChild(ch);
         
@@ -166,17 +175,18 @@ public class Trie {
             return false;
         }
         
-        // Recursively delete the rest of the word
-        boolean shouldDeleteChild = delete(child, word, index + 1);
+        // Try to delete the rest of the word from the child
+        boolean shouldDeleteChild = deleteHelper(child, word, index + 1);
         
-        // If the child should be deleted and it's not the end of another word
-        if (shouldDeleteChild && !child.isEndOfWord()) {
+        // If the child should be deleted (no children and not end of word)
+        if (shouldDeleteChild) {
             current.removeChild(ch);
             
-            // Return true if this node has no children, indicating it can be deleted
-            return !current.hasChildren();
+            // Current node can be deleted if it has no children and is not the end of a word
+            return !current.hasChildren() && !current.isEndOfWord();
         }
         
+        // Word was found and deleted, but we can't delete the node
         return false;
     }
     

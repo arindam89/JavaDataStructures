@@ -5,6 +5,7 @@ com/datastructures/leetcode/TopKFrequentElementsTest.class
 com/datastructures/leetcode/MinimumWindowSubstringTest.class
 com/datastructures/graph/GraphTest.class
 com/datastructures/leetcode/NumberOfIslandsTest.class
+com/datastructures/visualization/VisualizationUtilsTest.class
 com/datastructures/heap/MaxHeapTest.class
 com/datastructures/trie/TrieTest.class
 com/datastructures/leetcode/MedianFinderTest.class
@@ -12,6 +13,7 @@ com/datastructures/leetcode/LRUCacheTest.class
 com/datastructures/leetcode/DecodeStringTest.class
 com/datastructures/linkedlist/LinkedListTest.class
 com/datastructures/leetcode/SerializeDeserializeBinaryTreeTest.class
+com/datastructures/leetcode/WordDictionaryTest.class
 com/datastructures/leetcode/TrapRainWaterTest.class
 com/datastructures/leetcode/WordSearchTest.class
 com/datastructures/tree/BinaryTreeTest.class
