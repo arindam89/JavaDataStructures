@@ -1,10 +1,14 @@
 /home/runner/workspace/src/main/java/com/datastructures/leetcode/CoinChange.java
+/home/runner/workspace/src/main/java/com/datastructures/leetcode/CourseSchedule.java
 /home/runner/workspace/src/main/java/com/datastructures/leetcode/LongestIncreasingPath.java
 /home/runner/workspace/src/main/java/com/datastructures/leetcode/TrapRainWater.java
 /home/runner/workspace/src/main/java/com/datastructures/leetcode/WordLadder.java
 /home/runner/workspace/src/main/java/com/datastructures/leetcode/SerializeDeserializeBinaryTree.java
 /home/runner/workspace/src/main/java/com/datastructures/linkedlist/Node.java
+/home/runner/workspace/src/main/java/com/datastructures/leetcode/ValidParentheses.java
 /home/runner/workspace/src/main/java/com/datastructures/graph/Graph.java
+/home/runner/workspace/src/main/java/com/datastructures/leetcode/TopKFrequentElements.java
+/home/runner/workspace/src/main/java/com/datastructures/leetcode/DecodeString.java
 /home/runner/workspace/src/main/java/com/datastructures/leetcode/TrappingRainWater.java
 /home/runner/workspace/src/main/java/com/datastructures/graph/GraphExample.java
 /home/runner/workspace/src/main/java/com/datastructures/leetcode/SlidingWindowMaximum.java
@@ -20,6 +24,7 @@
 /home/runner/workspace/src/main/java/com/datastructures/bst/BinarySearchTree.java
 /home/runner/workspace/src/main/java/com/datastructures/leetcode/MinimumWindowSubstring.java
 /home/runner/workspace/src/main/java/com/datastructures/bst/BSTExample.java
+/home/runner/workspace/src/main/java/com/datastructures/leetcode/LRUCacheII.java
 /home/runner/workspace/src/main/java/com/datastructures/Main.java
 /home/runner/workspace/src/main/java/com/datastructures/leetcode/MergeKSortedLists.java
 /home/runner/workspace/src/main/java/com/datastructures/leetcode/LRUCache.java
@@ -27,5 +32,8 @@
 /home/runner/workspace/src/main/java/com/datastructures/tree/BinaryTree.java
 /home/runner/workspace/src/main/java/com/datastructures/tree/TreeNode.java
 /home/runner/workspace/src/main/java/com/datastructures/leetcode/NumberOfIslands.java
+/home/runner/workspace/src/main/java/com/datastructures/leetcode/LeetCodeExamplePart2.java
 /home/runner/workspace/src/main/java/com/datastructures/heap/MaxHeap.java
+/home/runner/workspace/src/main/java/com/datastructures/leetcode/LongestSubstringWithoutRepeatingCharacters.java
 /home/runner/workspace/src/main/java/com/datastructures/tree/BinaryTreeExample.java
+/home/runner/workspace/src/main/java/com/datastructures/leetcode/WordBreak.java
