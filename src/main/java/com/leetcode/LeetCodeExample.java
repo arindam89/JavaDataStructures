@@ -5,9 +5,20 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.leetcode.MergeKSortedLists.ListNode;
-import com.leetcode.SerializeDeserializeBinaryTree.TreeNode;
-
+import com.leetcode.design.LRUCache;
+import com.leetcode.graphs.WordLadder;
+import com.leetcode.graphs.NumberOfIslands;
+import com.leetcode.heap.MergeKSortedLists;
+import com.leetcode.heap.MergeKSortedLists.ListNode;
+import com.leetcode.trees.SerializeDeserializeBinaryTree;
+import com.leetcode.trees.SerializeDeserializeBinaryTree.TreeNode;
+import com.leetcode.strings.MinimumWindowSubstring;
+import com.leetcode.design.MedianFinder;
+import com.leetcode.arrays.SlidingWindowMaximum;
+import com.leetcode.strings.WordSearch;
+import com.leetcode.dynamic_programming.CoinChange;
+import com.leetcode.arrays.TrapRainWater;
+import com.leetcode.dynamic_programming.LongestIncreasingPath;
 /**
  * Example class to demonstrate LeetCode problem solutions.
  */

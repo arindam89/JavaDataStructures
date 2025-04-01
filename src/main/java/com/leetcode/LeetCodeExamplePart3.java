@@ -1,6 +1,7 @@
 package com.leetcode;
-
 import java.util.*;
+
+import com.leetcode.dynamic_programming.MinimumPathSum;
 
 /**
  * This class demonstrates the solutions for LeetCode problems (Part 3).

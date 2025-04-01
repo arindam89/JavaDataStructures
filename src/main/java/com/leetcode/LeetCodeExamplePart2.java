@@ -2,6 +2,15 @@ package com.leetcode;
 
 import java.util.Arrays;
 import java.util.List;
+import com.leetcode.arrays.TopKFrequentElements;
+import com.leetcode.strings.WordBreak;
+import com.leetcode.graphs.CourseSchedule;
+import com.leetcode.strings.LongestSubstringWithoutRepeatingCharacters;
+import com.leetcode.strings.DecodeString;
+import com.leetcode.strings.ValidParentheses;
+import com.leetcode.design.LRUCacheII;
+import com.leetcode.strings.WordDictionary;
+
 
 /**
  * Extension class for additional LeetCode examples.
