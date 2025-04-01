@@ -1,8 +1,6 @@
-package com.datastructures.leetcode.dynamic_programming;
+package com.leetcode.dynamic_programming;
 
 import org.junit.jupiter.api.Test;
-
-import com.leetcode.dynamic_programming.CoinChange;
 
 import static org.junit.jupiter.api.Assertions.*;
 

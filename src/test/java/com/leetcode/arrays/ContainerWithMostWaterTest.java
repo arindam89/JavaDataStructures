@@ -1,8 +1,6 @@
-package com.datastructures.leetcode.arrays;
+package com.leetcode.arrays;
 
 import org.junit.jupiter.api.Test;
-
-import com.leetcode.arrays.ContainerWithMostWater;
 
 import static org.junit.jupiter.api.Assertions.*;
 

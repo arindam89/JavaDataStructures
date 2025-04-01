@@ -1,8 +1,6 @@
-package com.datastructures.leetcode.graphs;
+package com.leetcode.graphs;
 
 import org.junit.jupiter.api.Test;
-
-import com.leetcode.graphs.NumberOfIslands;
 
 import static org.junit.jupiter.api.Assertions.*;
 

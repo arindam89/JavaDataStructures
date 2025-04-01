@@ -1,8 +1,6 @@
-package com.datastructures.leetcode.strings;
+package com.leetcode.strings;
 
 import org.junit.jupiter.api.Test;
-
-import com.leetcode.strings.ValidParentheses;
 
 import static org.junit.jupiter.api.Assertions.*;
 

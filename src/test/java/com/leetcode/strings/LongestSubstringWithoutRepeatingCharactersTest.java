@@ -1,8 +1,6 @@
-package com.datastructures.leetcode.strings;
+package com.leetcode.strings;
 
 import org.junit.jupiter.api.Test;
-
-import com.leetcode.strings.LongestSubstringWithoutRepeatingCharacters;
 
 import static org.junit.jupiter.api.Assertions.*;
 

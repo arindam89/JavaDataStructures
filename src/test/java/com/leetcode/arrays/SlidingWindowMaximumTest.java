@@ -1,12 +1,8 @@
-package com.datastructures.leetcode.arrays;
+package com.leetcode.arrays;
 
 import org.junit.jupiter.api.Test;
 
-import com.leetcode.arrays.SlidingWindowMaximum;
-
 import static org.junit.jupiter.api.Assertions.*;
-
-import java.util.Arrays;
 
 /**
  * Test class for SlidingWindowMaximum implementation.

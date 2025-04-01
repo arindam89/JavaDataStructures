@@ -1,11 +1,10 @@
-package com.datastructures.leetcode.heap;
+package com.leetcode.heap;
 
 import org.junit.jupiter.api.Test;
 
-import com.leetcode.heap.MergeKSortedLists;
-import com.leetcode.heap.MergeKSortedLists.ListNode;
-
 import static org.junit.jupiter.api.Assertions.*;
+
+import com.leetcode.heap.MergeKSortedLists.ListNode;
 
 /**
  * Test class for MergeKSortedLists implementation.

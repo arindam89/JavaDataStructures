@@ -1,8 +1,6 @@
-package com.datastructures.leetcode.design;
+package com.leetcode.design;
 
 import org.junit.jupiter.api.Test;
-
-import com.leetcode.design.MedianFinder;
 
 import static org.junit.jupiter.api.Assertions.*;
 

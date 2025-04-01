@@ -1,4 +1,4 @@
-package com.datastructures.leetcode.strings;
+package com.leetcode.strings;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

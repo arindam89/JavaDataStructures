@@ -1,8 +1,6 @@
-package com.datastructures.leetcode.trees;
+package com.leetcode.trees;
 
 import org.junit.jupiter.api.Test;
-
-import com.leetcode.trees.SerializeDeserializeBinaryTree;
 import com.leetcode.trees.SerializeDeserializeBinaryTree.TreeNode;
 
 import static org.junit.jupiter.api.Assertions.*;

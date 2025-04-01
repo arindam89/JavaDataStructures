@@ -1,9 +1,6 @@
-package com.datastructures.leetcode.trees;
+package com .leetcode.trees;
 
 import org.junit.jupiter.api.Test;
-
-import com.leetcode.trees.BinaryTreeMaxPathSum;
-import com.leetcode.trees.BinaryTreeMaxPathSum.TreeNode;
 
 import static org.junit.jupiter.api.Assertions.*;
 
