@@ -66,8 +66,25 @@ public class GraphExample {
         // Get edge weight
         System.out.println("Weight of edge A-B: " + undirectedGraph.getEdgeWeight("A", "B"));
         
-        // Check if the graph has a cycle
-        System.out.println("Has cycle? " + undirectedGraph.hasCycle());
+        // Check if the undirected graph has a cycle
+        System.out.println("Undirected graph has cycle? " + undirectedGraph.hasCycle());
+        
+        // Create a tree-like undirected graph (no cycles)
+        System.out.println("\nCreating a tree-like undirected graph (no cycles):");
+        Graph<String> treeGraph = new Graph<>();
+        treeGraph.addVertex("A");
+        treeGraph.addVertex("B");
+        treeGraph.addVertex("C");
+        treeGraph.addVertex("D");
+        treeGraph.addVertex("E");
+        
+        treeGraph.addEdge("A", "B", 1);
+        treeGraph.addEdge("A", "C", 1);
+        treeGraph.addEdge("B", "D", 1);
+        treeGraph.addEdge("C", "E", 1);
+        
+        System.out.println(treeGraph);
+        System.out.println("Tree-like undirected graph has cycle? " + treeGraph.hasCycle());
         
         // Minimum Spanning Tree
         System.out.println("\nMinimum Spanning Tree:");

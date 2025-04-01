@@ -406,17 +406,33 @@ public class Graph<T> {
     
     /**
      * Checks if the graph has a cycle.
+     * The algorithm varies based on whether the graph is directed or undirected.
      * 
      * @return true if the graph has a cycle, false otherwise
      */
     public boolean hasCycle() {
+        // For an undirected graph
+        if (!directed) {
+            return hasUndirectedCycle();
+        }
+        // For a directed graph
+        else {
+            return hasDirectedCycle();
+        }
+    }
+    
+    /**
+     * Checks if an undirected graph has a cycle.
+     * 
+     * @return true if the undirected graph has a cycle, false otherwise
+     */
+    private boolean hasUndirectedCycle() {
         Set<T> visited = new HashSet<>();
-        Set<T> recStack = new HashSet<>();
         
         // Check for cycles starting from each unvisited vertex
         for (T vertex : adjacencyList.keySet()) {
             if (!visited.contains(vertex)) {
-                if (hasCycleHelper(vertex, visited, recStack)) {
+                if (hasUndirectedCycleHelper(vertex, visited, null)) {
                     return true;
                 }
             }
@@ -426,14 +442,68 @@ public class Graph<T> {
     }
     
     /**
-     * Helper method to check for cycles.
+     * Helper method to check for cycles in an undirected graph.
+     * 
+     * @param current the current vertex
+     * @param visited the set of visited vertices
+     * @param parent the parent vertex of the current vertex (to avoid going back)
+     * @return true if a cycle is found, false otherwise
+     */
+    private boolean hasUndirectedCycleHelper(T current, Set<T> visited, T parent) {
+        // Mark the current vertex as visited
+        visited.add(current);
+        
+        // Visit all neighbors
+        for (T neighbor : adjacencyList.get(current).keySet()) {
+            // Skip the edge that connects to the parent
+            if (parent != null && neighbor.equals(parent)) {
+                continue;
+            }
+            
+            // If the neighbor is already visited, there's a cycle
+            if (visited.contains(neighbor)) {
+                return true;
+            }
+            
+            // Recursively check for cycles from the neighbor
+            if (hasUndirectedCycleHelper(neighbor, visited, current)) {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    /**
+     * Checks if a directed graph has a cycle.
+     * 
+     * @return true if the directed graph has a cycle, false otherwise
+     */
+    private boolean hasDirectedCycle() {
+        Set<T> visited = new HashSet<>();
+        Set<T> recStack = new HashSet<>();
+        
+        // Check for cycles starting from each unvisited vertex
+        for (T vertex : adjacencyList.keySet()) {
+            if (!visited.contains(vertex)) {
+                if (hasDirectedCycleHelper(vertex, visited, recStack)) {
+                    return true;
+                }
+            }
+        }
+        
+        return false;
+    }
+    
+    /**
+     * Helper method to check for cycles in a directed graph.
      * 
      * @param current the current vertex
      * @param visited the set of visited vertices
      * @param recStack the set of vertices in the current recursion stack
      * @return true if a cycle is found, false otherwise
      */
-    private boolean hasCycleHelper(T current, Set<T> visited, Set<T> recStack) {
+    private boolean hasDirectedCycleHelper(T current, Set<T> visited, Set<T> recStack) {
         // Mark the current vertex as visited
         visited.add(current);
         
@@ -444,7 +514,7 @@ public class Graph<T> {
         for (T neighbor : adjacencyList.get(current).keySet()) {
             // If the neighbor is not visited, recursively check for cycles
             if (!visited.contains(neighbor)) {
-                if (hasCycleHelper(neighbor, visited, recStack)) {
+                if (hasDirectedCycleHelper(neighbor, visited, recStack)) {
                     return true;
                 }
             } 

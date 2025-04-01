@@ -8,6 +8,7 @@ import com.datastructures.graph.GraphExample;
 import com.datastructures.trie.TrieExample;
 import com.datastructures.leetcode.LeetCodeExample;
 import com.datastructures.leetcode.LeetCodeExamplePart2;
+import com.datastructures.leetcode.LeetCodeExamplePart3;
 import com.datastructures.visualization.VisualizationExample;
 
 import java.util.Scanner;
@@ -60,7 +61,8 @@ public class Main {
         System.out.println("7. Trie examples");
         System.out.println("8. LeetCode problems (Part 1)");
         System.out.println("9. LeetCode problems (Part 2)");
-        System.out.println("10. Data Structure Visualizations");
+        System.out.println("10. LeetCode problems (Part 3)");
+        System.out.println("11. Data Structure Visualizations");
         System.out.println("0. Exit");
         
         System.out.print("\nEnter your choice: ");
@@ -109,6 +111,10 @@ public class Main {
                 LeetCodeExamplePart2.runExample();
                 break;
             case 10:
+                System.out.println("\n=== LeetCode Problem Examples (Part 3) ===");
+                LeetCodeExamplePart3.runExample();
+                break;
+            case 11:
                 System.out.println("\n=== Data Structure Visualizations ===");
                 VisualizationExample.runExample();
                 break;
@@ -152,6 +158,9 @@ public class Main {
         
         System.out.println("\n=== LeetCode Problem Examples (Part 2) ===");
         LeetCodeExamplePart2.runExample();
+        
+        System.out.println("\n=== LeetCode Problem Examples (Part 3) ===");
+        LeetCodeExamplePart3.runExample();
         
         System.out.println("\n=== Data Structure Visualizations ===");
         VisualizationExample.runExample();
