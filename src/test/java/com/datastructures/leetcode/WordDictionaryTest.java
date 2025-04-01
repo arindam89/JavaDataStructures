@@ -3,6 +3,8 @@ package com.datastructures.leetcode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import com.leetcode.WordDictionary;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**

@@ -1,9 +1,11 @@
 package com.datastructures.leetcode;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
-import com.datastructures.leetcode.SerializeDeserializeBinaryTree.TreeNode;
+import com.leetcode.SerializeDeserializeBinaryTree;
+import com.leetcode.SerializeDeserializeBinaryTree.TreeNode;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Test class for SerializeDeserializeBinaryTree implementation.

@@ -6,10 +6,10 @@ import com.datastructures.tree.BinaryTreeExample;
 import com.datastructures.bst.BSTExample;
 import com.datastructures.graph.GraphExample;
 import com.datastructures.trie.TrieExample;
-import com.datastructures.leetcode.LeetCodeExample;
-import com.datastructures.leetcode.LeetCodeExamplePart2;
-import com.datastructures.leetcode.LeetCodeExamplePart3;
 import com.datastructures.visualization.VisualizationExample;
+import com.leetcode.LeetCodeExample;
+import com.leetcode.LeetCodeExamplePart2;
+import com.leetcode.LeetCodeExamplePart3;
 
 import java.util.Scanner;
 

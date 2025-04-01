@@ -1,6 +1,9 @@
 package com.datastructures.leetcode;
 
 import org.junit.jupiter.api.Test;
+
+import com.leetcode.LRUCache;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**

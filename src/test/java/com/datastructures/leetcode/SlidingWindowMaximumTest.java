@@ -1,6 +1,9 @@
 package com.datastructures.leetcode;
 
 import org.junit.jupiter.api.Test;
+
+import com.leetcode.SlidingWindowMaximum;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
